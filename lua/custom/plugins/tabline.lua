@@ -1,5 +1,6 @@
 return {
   'kdheepak/tabline.nvim',
+  enabled = false,
   event = 'BufReadPre',
   config = function()
     require('tabline').setup {
