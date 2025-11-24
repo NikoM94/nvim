@@ -26,7 +26,7 @@ vim.keymap.set('n', '<C-f>', '<C-f>zz')
 vim.keymap.set('n', '<C-b>', '<C-d>zz')
 
 -- Clear Copilot suggestion or fallback to other functionality
-vim.keymap.set('n', '<esc>', function()
-  if not require('copilot-lsp.nes').clear() then
-  end
-end, { desc = 'Clear Copilot suggestion or fallback' })
+-- vim.keymap.set('n', '<esc>', function()
+--   if not require('copilot-lsp.nes').clear() then
+--   end
+-- end, { desc = 'Clear Copilot suggestion or fallback' })

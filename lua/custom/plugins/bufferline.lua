@@ -15,7 +15,6 @@ return {
           offsets = {
             {
               filetype = 'snacks_layout_box',
-              text = 'Explorer',
               highlight = 'Directory',
               text_align = 'left',
             },
@@ -26,8 +25,6 @@ return {
     keys = {
       { '<S-h>', '<cmd>BufferLineCyclePrev<cr>', desc = 'Prev Buffer' },
       { '<S-l>', '<cmd>BufferLineCycleNext<cr>', desc = 'Next Buffer' },
-      { '<leader>bo', '<cmd>BufferLineCloseOthers<cr>', desc = 'Close Other Buffers' },
-      { '<leader>bd', '<cmd>bd<cr>', desc = 'Close Buffer' },
     },
   },
 }

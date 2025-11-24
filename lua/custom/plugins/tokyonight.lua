@@ -1,7 +1,6 @@
 return {
   'folke/tokyonight.nvim',
-  lazy = false,
-  priority = 1000,
+  lazy = true,
   config = function()
     require('tokyonight').setup {
       style = 'night',
@@ -22,5 +21,6 @@ return {
       lualine_bold = false,
     }
     vim.cmd [[colorscheme tokyonight]]
+    require 'user.ui.feline_monokai'
   end,
 }
