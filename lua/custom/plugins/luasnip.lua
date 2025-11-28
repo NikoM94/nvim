@@ -9,6 +9,7 @@ function M.config()
   require('luasnip.loaders.from_lua').load {
     paths = { './lua/snippets' },
   }
+  require('luasnip').filetype_extend('javascript', { 'react' })
 
   require('which-key').add {
     {

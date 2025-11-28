@@ -9,6 +9,11 @@ return {
     },
     opts = {
       bigfile = { enabled = true },
+      terminal = {
+        win = { style = 'float' },
+        shell = vim.o.shell,
+        start_insert = true,
+      },
       dashboard = {
         preset = {
           keys = {
@@ -21,7 +26,7 @@ return {
               icon = ' ',
               key = 's',
               desc = 'Restore Session',
-              action = '<leader>ql',
+              action = '<leader>ll',
             },
             { icon = '󰒲 ', key = 'L', desc = 'Lazy', action = ':Lazy', enabled = package.loaded.lazy ~= nil },
             { icon = ' ', key = 'q', desc = 'Quit', action = ':qa' },
@@ -594,8 +599,8 @@ return {
         function()
           Snacks.win {
             file = vim.api.nvim_get_runtime_file('doc/news.txt', false)[1],
-            width = 0.6,
-            height = 0.6,
+            width = 0.5,
+            height = 0.5,
             wo = {
               spell = false,
               wrap = false,

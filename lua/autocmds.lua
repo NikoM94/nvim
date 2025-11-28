@@ -47,3 +47,23 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end
   end,
 })
+
+-- Add zsh parser to treesitter if not already installed
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+  pattern = '.zshrc',
+  callback = function()
+    local p = require 'nvim-treesitter.parsers'
+    if p.has_parser 'zsh' then
+      return
+    end
+    vim.notify 'Adding zsh parser to treesitter'
+    p.zsh = {
+      install_info = {
+        'https://github.com/georgeharker/tree-sitter-zsh',
+        generate_from_json = false, -- only needed if repo does not contain `src/grammar.json` either
+        queries = 'nvim-queries', -- also install queries from given directory
+      },
+      tier = 3,
+    }
+  end,
+})
