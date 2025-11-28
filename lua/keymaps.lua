@@ -1,16 +1,23 @@
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
-
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- setup keymap to enter this file
 vim.keymap.set('n', '<leader>vc', '<cmd>:e $MYVIMRC<CR>', { desc = 'Open init.lua' })
 -- Diagnostic keymaps
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+-- Save current buffer with Ctrl+S and show notification
+local save_buf = function()
+  local buf_name = vim.api.nvim_buf_get_name(0)
+  local f_name = buf_name:match '^.+/(.+)$' -- only filename, not full path
+  vim.cmd 'write'
+  vim.notify(string.format('%s saved', f_name), vim.log.levels.INFO)
+end
+
+vim.keymap.set('n', '<C-s>', save_buf, { desc = 'Save current buffer' })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
-
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 --  See `:help wincmd` for a list of all window commands
