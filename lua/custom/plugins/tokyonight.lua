@@ -1,6 +1,6 @@
 return {
   'folke/tokyonight.nvim',
-  lazy = true,
+  lazy = false,
   config = function()
     require('tokyonight').setup {
       style = 'night',
@@ -18,9 +18,10 @@ return {
       day_brightness = 0.3,
       hide_inactive_statusline = false,
       dim_inactive = false,
-      lualine_bold = false,
+      lualine_bold = true,
+      cache = true,
     }
     vim.cmd [[colorscheme tokyonight]]
-    require 'user.ui.feline_monokai'
+    -- require 'user.ui.feline_nightfox'
   end,
 }

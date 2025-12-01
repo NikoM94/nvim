@@ -42,6 +42,23 @@ M.opts = {
     -- Adjusts spacing to ensure icons are aligned
     nerd_font_variant = 'mono',
   },
+  cmdline = {
+    enabled = true,
+    keymap = {
+      preset = 'cmdline',
+      ['<Right>'] = false,
+      ['<Left>'] = false,
+    },
+    completion = {
+      list = { selection = { preselect = false } },
+      menu = {
+        auto_show = function(ctx)
+          return vim.fn.getcmdtype() == ':'
+        end,
+      },
+      ghost_text = { enabled = true },
+    },
+  },
 
   -- (Default) Only show the documentation popup when manually triggered
   completion = {

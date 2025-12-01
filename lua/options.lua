@@ -32,6 +32,8 @@ vim.o.shiftwidth = 2
 vim.o.expandtab = false
 vim.o.softtabstop = 2
 
+vim.opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprtp', 'folds' }
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.

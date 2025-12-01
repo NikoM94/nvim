@@ -44,13 +44,15 @@ return { -- Useful plugin to show you pending keybinds.
 
     -- Document existing key chains
     spec = {
-      { '<leader>s', group = '[S]earch' },
-      { '<leader>t', group = '[T]oggle' },
-      { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-      { '<leader>v', group = '[V]im config' },
-      { '<leader>g', group = 'Lazy[G]it' },
-      { '<leader>q', group = 'Sessions' },
-      { '<leader>a', group = 'ai' },
+      { '<leader>s', group = 'Search' },
+      { '<leader>t', group = 'Toggle' },
+      { '<leader>v', group = 'Config' },
+      { '<leader>g', group = 'Git' },
+      { '<leader>l', group = 'Sessions' },
+      { '<leader>a', group = 'AI' },
+      { '<leader>u', group = 'UI' },
+      { '<leader>p', group = 'CoPilot Panel' },
+      { '<leader>c', group = 'Rename File' },
     },
   },
 }

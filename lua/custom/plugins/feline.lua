@@ -1,5 +1,5 @@
 return {
   'famiu/feline.nvim',
-  enabled = true,
+  enabled = false,
   event = 'BufReadPre',
 }
