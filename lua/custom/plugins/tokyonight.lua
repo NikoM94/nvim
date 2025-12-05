@@ -9,8 +9,8 @@ return {
       styles = {
         comments = { italic = true },
         keywords = { italic = true },
-        functions = {},
-        variables = {},
+        functions = { italic = true },
+        variables = { bold = false },
         sidebars = 'dark',
         floats = 'dark',
       },
