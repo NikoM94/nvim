@@ -12,7 +12,7 @@ return {
         temperature = 0.1, -- Lower = focused, higher = creative
         window = {
           layout = 'float',
-          width = 80, -- Fixed width in columns
+          width = 70, -- Fixed width in columns
           height = 20, -- Fixed height in rows
           border = 'rounded', -- 'single', 'double', 'rounded', 'solid'
           title = '🤖 AI Assistant',
@@ -22,7 +22,12 @@ return {
       },
     },
     keys = {
-      { '<leader>aa', '<cmd>CopilotChatToggle<CR>', desc = 'Open AI Chat' },
+      { '<leader>aa', '<cmd>CopilotChatToggle<CR>', desc = 'Open CopilotChat' },
+      { '<leader>ap', '<cmd>CopilotChatPrompts<CR>', desc = 'Prompt Templates' },
+      { '<leader>am', '<cmd>CopilotChatModels<CR>', desc = 'Select Model' },
+      { '<leader>as', '<cmd>CopilotChatSave ', desc = 'Save chat history' },
+      { '<leader>al', '<cmd>CopilotChatLoad ', desc = 'Load chat history' },
+      { '<leader>ar', '<cmd>CopilotChatReset<CR>', desc = 'Reset chat window' },
     },
   },
 }
