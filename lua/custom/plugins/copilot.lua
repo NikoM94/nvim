@@ -13,8 +13,8 @@ return {
           typescript = true,
           css = true,
           html = true,
-          python = true,
-          lua = true,
+          python = false,
+          lua = false,
           ['*'] = false, -- disable for all other filetypes and ignore default `filetypes`
         },
         suggestion = {

@@ -73,6 +73,8 @@ vim.o.confirm = true
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.g.snacks_animate = false
+
 --enable 24-bit colour
 vim.opt.termguicolors = true
 
