@@ -8,7 +8,7 @@ return {
       terminal_colors = true,
       styles = {
         comments = { italic = true },
-        keywords = { bold = true },
+        keywords = { italic = true },
         functions = { italic = true },
         variables = { bold = false },
         sidebars = 'dark',

@@ -17,16 +17,22 @@ return {
         shade = 'dark',
         percentage = 0.15,
       },
-      integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        telescope = true,
-        treesitter = true,
-        notify = true,
-        mini = true,
-        lualine = true,
+      styles = {
+        conditionals = { 'italic' },
+        keywords = { 'bold' },
+        functions = { 'italic' },
       },
+      auto_integrations = true,
+      -- integrations = {
+      --   cmp = true,
+      --   gitsigns = true,
+      --   nvimtree = true,
+      --   telescope = true,
+      --   treesitter = true,
+      --   notify = true,
+      --   mini = true,
+      --   lualine = true,
+      -- },
     }
     vim.cmd.colorscheme 'catppuccin'
   end,
