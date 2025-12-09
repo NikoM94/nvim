@@ -28,7 +28,7 @@ return {
         },
         panel = { enabled = false },
         keys = {
-          vim.keymap.set('n', '<leader>pp', '<cmd>:Copilot panel<CR>', { desc = 'Open copilot panel' }),
+          vim.keymap.set('n', '<leader>pp', '<cmd>:Copilot panel toggle<CR>', { desc = 'Toggle copilot panel' }),
         },
       }
     end,
