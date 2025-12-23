@@ -3,7 +3,7 @@ return {
   lazy = false,
   config = function()
     require('tokyonight').setup {
-      style = 'night',
+      style = 'moon',
       transparent = false,
       terminal_colors = true,
       styles = {
