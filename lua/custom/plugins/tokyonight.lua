@@ -21,7 +21,7 @@ return {
       lualine_bold = true,
       cache = true,
     }
-    vim.cmd [[colorscheme tokyonight]]
+    -- vim.cmd [[colorscheme tokyonight]]
     -- require 'user.ui.feline_nightfox'
   end,
 }

@@ -3,6 +3,6 @@ return {
   name = 'moonfly',
   lazy = true,
   config = function()
-    vim.g.moonflyTransparent = true
+    vim.g.moonflyTransparent = false
   end,
 }
