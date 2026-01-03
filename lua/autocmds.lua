@@ -7,6 +7,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
+  pattern = { '*.axaml' },
+  callback = function(event)
+    vim.lsp.start {
+      name = 'avalonia',
+      cmd = { 'avalonia-ls' },
+      root_dir = vim.fn.getcwd(),
+    }
+  end,
+})
+vim.filetype.add {
+  extension = {
+    axaml = 'xml',
+  },
+}
+
 -- Restore cursor to file position in previous editing session
 vim.api.nvim_create_autocmd('BufReadPost', {
   callback = function(args)

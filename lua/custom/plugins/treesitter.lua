@@ -19,6 +19,7 @@ return {
         'markdown_inline',
         'markdown',
         'rust',
+        'c_sharp',
       }
 
       vim.defer_fn(function()
@@ -34,12 +35,29 @@ return {
           local hasStarted = pcall(vim.treesitter.start) -- errors for filetypes with no parser
 
           -- indent
-          local noIndent = {}
-          if hasStarted and not vim.list_contains(noIndent, ctx.match) then
-            vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
-          end
+          -- local noIndent = {}
+          -- if hasStarted and not vim.list_contains(noIndent, ctx.match) then
+          --   vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          -- end
         end,
       })
     end,
+  },
+  {
+    {
+      'MeanderingProgrammer/treesitter-modules.nvim',
+      dependencies = { 'nvim-treesitter/nvim-treesitter' },
+      opts = {
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = '<A-o>',
+            node_incremental = '<A-o>',
+            scope_incremental = '<A-O>',
+            node_decremental = '<A-i>',
+          },
+        },
+      },
+    },
   },
 }

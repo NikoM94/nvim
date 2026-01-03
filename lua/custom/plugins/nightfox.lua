@@ -13,7 +13,7 @@ return {
         },
       },
     }
-    vim.cmd [[colorscheme carbonfox]]
-    require 'user.ui.feline_nightfox'
+    -- vim.cmd [[colorscheme carbonfox]]
+    -- require 'user.ui.feline_nightfox'
   end,
 }

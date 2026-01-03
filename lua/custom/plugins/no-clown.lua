@@ -1,10 +1,12 @@
 return {
   'aktersnurra/no-clown-fiesta.nvim',
-  lazy = true,
+  lazy = false,
+  priority = 1000,
   config = function()
     require('no-clown-fiesta').setup {
-      theme = 'dim',
+      theme = 'dark',
       transparent = 'false',
     }
+    vim.cmd [[colorscheme no-clown-fiesta-dark]]
   end,
 }

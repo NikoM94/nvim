@@ -17,6 +17,8 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = false
 vim.o.softtabstop = 2
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 vim.opt.sessionoptions = { 'buffers', 'curdir', 'tabpages', 'winsize', 'help', 'globals', 'skiprtp', 'folds' }
 
@@ -53,6 +55,7 @@ vim.o.splitbelow = true
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 vim.o.list = true
+
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!

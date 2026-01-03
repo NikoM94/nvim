@@ -7,6 +7,7 @@ return {
       lsp = {
         enabled = false,
       },
+      picker = 'snacks',
     }
   end,
 }
