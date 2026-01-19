@@ -9,7 +9,7 @@ return {
     config = function()
       require('copilot').setup {
         filetypes = {
-          javascript = false,
+          javascript = true,
           typescript = true,
           css = true,
           html = true,

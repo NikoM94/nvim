@@ -25,15 +25,15 @@ return {
       auto_integrations = true,
       -- integrations = {
       --   cmp = true,
-      --   gitsigns = true,
+      gitsigns = true,
       --   nvimtree = true,
       --   telescope = true,
       --   treesitter = true,
       --   notify = true,
-      --   mini = true,
+      mini = true,
       --   lualine = true,
       -- },
     }
-    -- vim.cmd.colorscheme 'catppuccin'
+    vim.cmd.colorscheme 'catppuccin'
   end,
 }
