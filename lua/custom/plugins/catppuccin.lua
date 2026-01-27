@@ -34,6 +34,6 @@ return {
       --   lualine = true,
       -- },
     }
-    vim.cmd.colorscheme 'catppuccin'
+    -- vim.cmd.colorscheme 'catppuccin'
   end,
 }
