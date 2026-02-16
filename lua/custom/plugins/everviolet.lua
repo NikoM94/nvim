@@ -66,6 +66,6 @@ return {
         neotree = true,
       },
     }
-    vim.cmd.colorscheme 'evergarden'
+    -- vim.cmd.colorscheme 'evergarden'
   end,
 }

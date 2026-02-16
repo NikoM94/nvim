@@ -1,5 +1,15 @@
 local M = { 'L3MON4D3/LuaSnip' }
-M.dependencies = { 'rafamadriz/friendly-snippets' }
+M.dependencies = {
+  {
+    'rafamadriz/friendly-snippets',
+    config = function()
+      local js_ts_files = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx' }
+      for _, value in ipairs(js_ts_files) do
+        require('luasnip').filetype_extend(value, { 'html' })
+      end
+    end,
+  },
+}
 M.version = 'v2.*'
 M.build = 'make install_jsregexp'
 function M.config()
@@ -9,7 +19,6 @@ function M.config()
   require('luasnip.loaders.from_lua').load {
     paths = { './lua/snippets' },
   }
-  require('luasnip').filetype_extend('javascript', { 'react' })
 
   require('which-key').add {
     {

@@ -9,13 +9,13 @@ return {
     config = function()
       require('copilot').setup {
         filetypes = {
-          javascript = true,
+          javascript = false,
           typescript = true,
           css = true,
           html = true,
           python = false,
           lua = false,
-          ['*'] = false, -- disable for all other filetypes and ignore default `filetypes`
+          rust = true,
         },
         suggestion = {
           enabled = true,

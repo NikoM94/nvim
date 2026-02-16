@@ -7,6 +7,9 @@ vim.g.have_nerd_font = true
 vim.o.number = true
 vim.o.relativenumber = true
 
+-- weird issue with bun --hot not finding module if this is not set to yes
+vim.opt.backupcopy = 'yes'
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
 
