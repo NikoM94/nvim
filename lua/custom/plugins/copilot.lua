@@ -6,16 +6,19 @@ return {
     },
     event = 'InsertEnter',
     build = ':Copilot auth',
+    enabled = false,
     config = function()
       require('copilot').setup {
         filetypes = {
           javascript = false,
-          typescript = true,
+          typescript = false,
           css = true,
           html = true,
           python = false,
           lua = false,
           rust = true,
+          haskell = false,
+          react = false,
         },
         suggestion = {
           enabled = true,

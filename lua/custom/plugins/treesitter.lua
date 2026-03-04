@@ -26,7 +26,11 @@ return {
         require('nvim-treesitter').install(parser_installed)
       end, 1000)
       require('nvim-treesitter').update()
-
+      -- require('nvim-treesitter.configs').setup {
+      --   highlight = {
+      --     enable = true,
+      --   },
+      -- }
       -- auto-start highlights & indentation
       vim.api.nvim_create_autocmd('FileType', {
         desc = 'User: enable treesitter highlighting',
